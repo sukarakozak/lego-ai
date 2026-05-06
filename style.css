@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background:
+        radial-gradient(circle at top left, rgba(126, 34, 206, 0.35), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(79, 70, 229, 0.25), transparent 35%),
+        linear-gradient(135deg, #050816, #0b1026 45%, #1e1b4b);
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #ffffff;
+    font-size: 42px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 18px rgba(168, 85, 247, 0.6);
+}
+
+header p {
+    font-size: 18px;
+    color: #d8d8ff;
+}
+
+.app {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 25px;
+}
+
+.input-card,
+.output-card,
+.order-preview-card,
+.order-form-card,
+.success-card {
+    background: rgba(255, 255, 255, 0.95);
+    color: #111827;
+    border-radius: 22px;
+    padding: 25px;
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(196, 181, 253, 0.7);
+}
+
+.input-card h2,
+.output-card h2,
+.order-preview-card h2,
+.order-form-card h2,
+.success-card h2 {
+    color: #4c1d95;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #1e1b4b;
+}
+
+select,
+input,
+textarea {
+    width: 100%;
+    padding: 13px;
+    border-radius: 12px;
+    border: 2px solid #c4b5fd;
+    font-size: 15px;
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #111827;
+    outline: none;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.18);
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #312e81, #7c3aed);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 8px 18px rgba(49, 46, 129, 0.35);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #1e1b4b, #6d28d9);
+    transform: scale(1.02);
+}
+
+.note {
+    margin-top: 18px;
+    font-size: 13px;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+.image-box {
+    width: 100%;
+    height: 330px;
+    border: 2px dashed #a78bfa;
+    border-radius: 18px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, #eef2ff, #f5f3ff);
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+#placeholderText {
+    color: #4c1d95;
+    font-size: 18px;
+    text-align: center;
+    padding: 15px;
+}
+
+.details {
+    background: linear-gradient(135deg, #f5f3ff, #eef2ff);
+    padding: 18px;
+    border-radius: 16px;
+    border: 1px solid #ddd6fe;
+}
+
+.details p {
+    margin-bottom: 12px;
+    line-height: 1.5;
+    color: #1f2937;
+}
+
+.details strong {
+    color: #312e81;
+}
+
+.order-button {
+    margin-top: 15px;
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    color: #ffffff;
+}
+
+.order-button:hover {
+    background: linear-gradient(135deg, #6d28d9, #9333ea);
+}
+
+.order-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.order-image-box {
+    width: 100%;
+    height: 300px;
+    border: 2px dashed #a78bfa;
+    border-radius: 18px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #eef2ff, #f5f3ff);
+}
+
+.order-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.confirm-button {
+    margin-top: 10px;
+    background: linear-gradient(135deg, #312e81, #7c3aed);
+    color: white;
+}
+
+.confirm-button:hover {
+    background: linear-gradient(135deg, #1e1b4b, #6d28d9);
+}
+
+.back-button {
+    margin-top: 12px;
+    background: linear-gradient(135deg, #111827, #312e81);
+}
+
+.back-button:hover {
+    background: linear-gradient(135deg, #020617, #1e1b4b);
+}
+
+.success-card {
+    margin-top: 25px;
+    background: linear-gradient(135deg, #ffffff, #f5f3ff);
+    border: 2px solid #a78bfa;
+    display: none;
+}
+
+.success-card p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #1f2937;
+}
+
+.payment-box {
+    margin-top: 20px;
+    padding: 18px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #eef2ff, #f5f3ff);
+    border: 2px solid #c4b5fd;
+    margin-bottom: 20px;
+}
+
+.payment-box h2 {
+    color: #4c1d95;
+    margin-bottom: 10px;
+}
+
+.payment-note {
+    font-size: 13px;
+    color: #4b5563;
+    margin-bottom: 15px;
+}
+
+.payment-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #d8d8ff;
+    font-size: 14px;
+}
+
+@media (max-width: 800px) {
+    .app,
+    .order-page {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    .payment-row {
+        grid-template-columns: 1fr;
+    }
+}
